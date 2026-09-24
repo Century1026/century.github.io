@@ -18,6 +18,24 @@
     // Remove no-js class
     $('html').removeClass('no-js');
 
+    // Keep shortcut scrolling quick and let user input interrupt it.
+    function stopScrolling() {
+        $('html, body').stop(true, false);
+    }
+
+    function scrollToPosition(top) {
+        stopScrolling();
+        var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        $('html, body').animate({ scrollTop: top }, reducedMotion ? 0 : 300);
+    }
+
+    $(window).on('wheel touchstart pointerdown', stopScrolling);
+    $(document).on('keydown', function(e) {
+        if ([32, 33, 34, 35, 36, 37, 38, 39, 40, 27].indexOf(e.which) !== -1) {
+            stopScrolling();
+        }
+    });
+
     // Animate to section when nav is clicked
     $('header a').click(function(e) {
 
@@ -28,9 +46,7 @@
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
 
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+        scrollToPosition(scrollDistance);
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
@@ -40,17 +56,13 @@
 
     // Scroll to top
     $('#to-top').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 500);
+        scrollToPosition(0);
     });
 
     // Scroll to first element
     $('#lead-down span').click(function() {
         var scrollDistance = $('#lead').next().offset().top;
-        $('html, body').animate({
-            scrollTop: scrollDistance + 'px'
-        }, 500);
+        scrollToPosition(scrollDistance);
     });
 
     // Create timeline

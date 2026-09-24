@@ -375,6 +375,7 @@ footer {
         text-transform: uppercase;
         letter-spacing: 0.05em;
         line-height: 0.9em;
+        margin-bottom: 30px;
     }
 
     h2 {
@@ -650,6 +651,14 @@ footer {
     border-radius: 4px;
 }
 
+#projects .project > .project {
+    margin-bottom: 0;
+}
+
+#projects video {
+    display: block;
+}
+
 .project-image {
     float: left;
 }
@@ -700,25 +709,58 @@ footer {
 
     h2 {
         color: $heading;
-        margin-bottom: 50px;
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        max-width: 1200px;
+        margin: 0 auto 12px;
+        color: $heading;
+        font-size: 1.25em;
+        font-weight: 400;
+        text-align: left;
     }
 
     ul {
-        display: block;
-        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 auto 28px;
         padding: 0;
-        max-width: 800px;
+        max-width: 1200px;
+        text-align: left;
+        list-style: none;
+    }
+
+    ul:last-child {
+        margin-bottom: 0;
     }
 
     li {
-        display: inline-block;
-        margin: 7px;
+        margin: 0;
         padding: 5px 10px;
+        max-width: 100%;
+        overflow-wrap: anywhere;
         color: $heading;
         background: darken($background-alt, 5%);
         list-style: none;
         cursor: default;
         font-size: 1.2em;
+    }
+}
+
+#skills h3 {
+    text-align: center;
+}
+
+#skills ul {
+    justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    #skills li {
+        font-size: 16px;
+        padding: 5px 9px;
     }
 }
 
@@ -732,6 +774,48 @@ footer {
     padding: 50px 15px;
     background: $base-color;
     text-align: center;
+
+    a, #copy-wechat {
+        color: inherit;
+        text-decoration: underline;
+    }
+
+    .wechat-copy {
+        position: relative;
+        display: inline-block;
+    }
+
+    #wechat-copy-status {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+        max-width: min(220px, 60vw);
+        padding: 8px 16px;
+        border-radius: 20px;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        line-height: 1.4;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 180ms ease;
+
+        &.is-visible {
+            opacity: 1;
+        }
+    }
+
+    #copy-wechat {
+        padding: 0;
+        border: 0;
+        background: none;
+        font: inherit;
+        cursor: pointer;
+    }
 
     h2 {
         margin: 0 0 15px 0;

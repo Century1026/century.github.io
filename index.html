@@ -30,9 +30,6 @@
         </div>
         <ul id="menu" class="shadow">
             <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
                 <a href="#projects">Projects</a>
             </li>
             <li>
@@ -54,7 +51,6 @@
     <div id="lead">
         <div id="lead-content">
             <h1>Zhiyu Sun</h1>
-            <h2>Biomedical Engineer</h2>
             <a href="ZhiyuSun_Resume.pdf" class="btn-rounded-white">View Resume</a>
         </div>
         <!-- End #lead-content -->
@@ -70,26 +66,27 @@
     </div>
     <!-- End #lead -->
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        I’m Zhiyu, a Biomedical Engineering grad at Columbia with a passion for building tech at the intersection of health and computing. I work across brain-computer interfaces, AR/VR, and medical imaging, using tools like Python, Unity, and C# to create practical, human-centered solutions.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
     <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
         <div class="container">
             <div class="row">
+                <div class="project shadow-large">
+                    <div class="project no-image">
+                        <div class="project-info">
+                            <h3>AI-Enabled Quadruped Robot with Vision and Audio Control</h3>
+                            <p>
+                                A custom-built quadruped robot combining 3D-printed legs, Raspberry Pi control, and AI-powered vision with wake-word detection and speech recognition for real-time voice interaction.
+                            </p>
+                        </div>
+                        <div>
+                            <video style="width: 100%;" controls>
+                                <source src="Robot.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+
                 <div class="project shadow-large">
                     <div class="project no-image">
                         <div class="project-info">
@@ -205,18 +202,25 @@
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
         <div id="experience-timeline">
-            <div data-date="Oct 2025 – Dec 2025">
+            <div data-date="Apr 2026 – Sep 2026">
+                <h3>VisionNav Robotics, Inc.</h3>
+                <h4>Senior Project Engineer</h4>
+                <p>
+                    Brought autonomous forklift systems into operation for global manufacturers, integrating PLC controls and navigation systems and resolving technical challenges on site.
+                </p>
+            </div>
+            <div data-date="Oct 2025 – Feb 2026">
                 <h3>SurgiVance, Inc.</h3>
                 <h4>Data Science R&D Intern</h4>
                 <p>
-                    Curated and maintained large-scale digital pathology image databases with precise labeling and quality control to support AI model training. Collaborated with AI engineers to refine image analysis and enhancement algorithms, integrating AI-generated outputs with original scans to build comprehensive reference libraries for model validation and research.
+                    Built interactive image annotation tools and accelerated segmentation workflows, making image labeling more consistent across views and faster to process.
                 </p>
             </div>
             <div data-date="Feb 2025 – Jun 2025">
                 <h3>Guo Lab</h3>
                 <h4>Research Assistant</h4>
                 <p>
-                    Optimized the training efficiency of a CNN–Mamba hybrid model for 3D MRI segmentation by eliminating software bottlenecks and maximizing hardware utilization. Implemented CPU-side data preloading and a custom Dice Score computation to significantly reduce GPU-memory overhead and runtime latency, cutting total training time by 75% while maintaining a Dice Score accuracy of 0.988.
+                    Improved the efficiency of deep learning models for 3D MRI segmentation, shortening training time and reducing GPU memory overhead while preserving segmentation accuracy.
                 </p>
             </div>
             <div data-date="Dec 2023 – Jan 2024">
@@ -235,9 +239,9 @@
             </div>
             <div data-date="Jun 2023 – Sep 2023">
                 <h3>Shanghai Microport Medbot (Group) Co., Ltd.</h3>
-                <h4>Operations Intern & Data Intern</h4>
+                <h4>Operations &amp; Data Intern</h4>
                 <p>
-                    Analyzed feedback and clinical operation data from four major exhibitions to identify performance trends and develop two data-driven enhancement plans adopted by the team. Designed and implemented a hierarchical, parameter-based data-sorting model that improved inventory management efficiency by 50%. Additionally, engaged over 50 visitors daily through data-informed demonstrations of robotic technologies and product promotion, securing 13 key hospital-director contacts for future collaboration.
+                    Connected robotic technology demonstrations with operational improvements, turning customer feedback into actionable plans and building a data model to streamline inventory tracking.
                 </p>
             </div>
         </div>
@@ -280,40 +284,36 @@
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
-        <ul>
-            <span style="font-weight: 300; font-size: 24px;">Coding:</span>
-            <li>SQL</li>
-            <li>R</li>
+        <h3 id="skills-languages">Languages</h3>
+        <ul aria-labelledby="skills-languages">
             <li>Python</li>
-            <li>MATLAB</li>
-            <li>C#</li>
             <li>C++</li>
+            <li>MATLAB</li>
             <li>C</li>
+            <li>TypeScript</li>
             <li>Bash</li>
-            <li>Git</li>
+            <li>SQL</li>
+            <li>C#</li>
+            <li>R</li>
+            <li>LaTeX</li>
         </ul>
-        <ul>
-            <span style="font-weight: 300; font-size: 24px;">Libraries:</span>
-            <li>Pandas</li>
+        <h3 id="skills-libraries">Libraries</h3>
+        <ul aria-labelledby="skills-libraries">
             <li>NumPy</li>
             <li>TensorFlow</li>
-            <li>PsychoPy</li>
+            <li>Pandas</li>
             <li>Matplotlib</li>
-            <li>Simulink</li>
+            <li>Qt</li>
+            <li>PsychoPy</li>
         </ul>
-        <ul>
-            <span style="font-weight: 300; font-size: 24px;">Software:</span>
-            <li>Docker</li>
-            <li>Unity</li>
+        <h3 id="skills-tools">Tools</h3>
+        <ul aria-labelledby="skills-tools">
+            <li>Git</li>
             <li>SolidWorks</li>
+            <li>Simulink</li>
             <li>VS Code</li>
-            <li>Cursor</li>
+            <li>Bambu Studio</li>
             <li>Power BI</li>
-        </ul>
-        <ul>
-            <span style="font-weight: 300; font-size: 24px;">Languages:</span>
-            <li>English</li>
-            <li>Mandarin</li>
         </ul>
     </div>
     <!-- End #skills -->
@@ -321,9 +321,12 @@
     <div id="contact">
         <h2>Get in Touch</h2>
         <div>
-            Email: zs2710@columbia.edu<br>
-            Phone: +1 (646) 552-5444<br>
-            WeChat: szy518518rz
+            Email: <a href="mailto:zs2710@columbia.edu">zs2710@columbia.edu</a><br>
+            Phone: <a href="tel:+16465525444">+1 (646) 552-5444</a><br>
+            WeChat: <span class="wechat-copy">
+                <button type="button" id="copy-wechat" aria-label="Copy WeChat ID" title="Click to copy">szy518518rz</button>
+                <span id="wechat-copy-status" role="status" aria-live="polite"></span>
+            </span>
         </div>
         <!-- <div id="contact-form">
             <form method="POST" action="https://formspree.io/email@email.com">
@@ -380,6 +383,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
+    <script src="js/wechat.js"></script>
 </body>
 
 </html>
